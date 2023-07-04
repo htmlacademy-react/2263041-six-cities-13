@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
-* Студент: [Sergey Karpenko](https://up.htmlacademy.ru/react/13/user/2263041).
-* Наставник: `Неизвестно`.
+- Студент: [Sergey Karpenko](https://up.htmlacademy.ru/react/13/user/2263041).
+- Наставник: [Кирилл Пиринен].
 
 ---
 
