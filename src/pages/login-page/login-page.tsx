@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import Logo from '../logo-page/logo-page';
 
@@ -6,7 +7,7 @@ function Login (): JSX.Element {
     <>
       <Logo/>
       <Helmet>
-        <title>6 cities - Login</title>
+        <title>6-Cities Login</title>
       </Helmet>
       <section className="login">
         <h1 className="login__title">Sign in</h1>

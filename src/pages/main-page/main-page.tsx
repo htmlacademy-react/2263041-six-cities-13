@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import Card from '../../components/card/card';
 import Logo from '../logo-page/logo-page';
@@ -11,7 +12,7 @@ function Main({ offersCount }: MainPageProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <Helmet>
-        <title>6 cities - Main</title>
+        <title>6-Cities Main</title>
       </Helmet>
       <header className="header">
         <div className="container">

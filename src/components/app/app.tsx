@@ -6,6 +6,7 @@ import Login from '../../pages/login-page/login-page';
 import Offers from '../../pages/offer-page/offer-page';
 import NotFound from '../../pages/not-found-page/not-found-page';
 import PrivateRoute from '../privet-route/privet-route';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 type TAppProps = {
@@ -14,34 +15,36 @@ type TAppProps = {
 
 function App({ offersCount }: TAppProps): JSX.Element {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={<Main offersCount={offersCount}/>}
-        />
-        <Route
-          path={`${AppRoute.Offers}/:offerId`}
-          element={<Offers/>}
-        />
-        <Route
-          path={AppRoute.Login}
-          element={<Login/>}
-        />
-        <Route
-          path={AppRoute.Favorites}
-          element={
-            <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
-              <Favorites/>
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path={AppRoute.NotFound}
-          element={<NotFound/>}
-        />
-      </Routes>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<Main offersCount={offersCount}/>}
+          />
+          <Route
+            path={AppRoute.Offers}
+            element={<Offers/>}
+          />
+          <Route
+            path={AppRoute.Login}
+            element={<Login/>}
+          />
+          <Route
+            path={AppRoute.Favorites}
+            element={
+              <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+                <Favorites/>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={AppRoute.NotFound}
+            element={<NotFound/>}
+          />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

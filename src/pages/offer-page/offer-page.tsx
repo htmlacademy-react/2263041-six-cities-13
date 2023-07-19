@@ -1,19 +1,27 @@
 import { Link } from 'react-router-dom';
-import Logo from '../logo-page/logo-page';
 import { Helmet } from 'react-helmet-async';
+
 
 function Offers(): JSX.Element {
   return (
 
     <div className="page">
       <Helmet>
-        <title>6 cities - Offer</title>
+        <title>6-Cities Offers</title>
       </Helmet>
       <header className="header">
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
-              <Logo/>
+              <Link className="header__logo-link" to="/">
+                <img
+                  className="header__logo"
+                  src="img/logo.svg"
+                  alt="6 cities logo"
+                  width={81}
+                  height={41}
+                />
+              </Link>
             </div>
             <nav className="header__nav">
               <ul className="header__nav-list">

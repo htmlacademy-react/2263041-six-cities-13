@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 import Logo from '../logo-page/logo-page';
-import { Helmet } from 'react-helmet-async';
+
 
 function Sign ():JSX.Element {
   return (
     <>
       <Logo/>
-      <Helmet>
-        <title>6 sities - Sign</title>
-      </Helmet>
       <ul className="header__nav-list">
         <li className="header__nav-item user">
           <Link className="header__nav-link header__nav-link--profile" to="/">
